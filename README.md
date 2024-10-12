@@ -31,12 +31,12 @@ Displays a greeting message for users.
 - Store instructor data by clicking "Add", and the data will be displayed on the instructor page.
 - If no image is provided, a "no image" placeholder will be shown.
 - Functions: View details, edit, delete, and search.
-- ![Faculty](https://github.com/SallmaAtef/Registration-System/blob/main/image%20(5).png)
+- ![Index](https://github.com/SallmaAtef/Registration-System/blob/main/image%20(4).png)
 
 ### 4. Faculty Management
 - Add, modify, or delete faculty information.
 - View faculty details including description.
-- ![Index](https://github.com/SallmaAtef/Registration-System/blob/main/image%20(4).png)
+- ![Faculty](https://github.com/SallmaAtef/Registration-System/blob/main/image%20(5).png)
 ## Installation
 1. Clone the repository:  
    ```bash
