@@ -23,6 +23,7 @@ Displays a greeting message for users.
 - If no image is provided, a "no image" placeholder will be shown.
 - Functions: View details, edit, delete, and search.
 - ![Registration](https://github.com/SallmaAtef/Registration-System/blob/main/image%20(1).png)
+- ![Registration](https://github.com/SallmaAtef/Registration-System/blob/main/image%20(2).png)
 
 ### 3. Instructor Management
 - Add and display instructor data by clicking "Add New".
