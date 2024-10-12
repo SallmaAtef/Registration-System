@@ -13,6 +13,8 @@ This project is a University Registration System for instructors and students. I
 
 ### 1. Home Page
 Displays a greeting message for users.
+![Alt text](./path/to/image.png)
+
 
 ### 2. Student Management
 - Add and display student data by clicking "Add New".
