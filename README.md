@@ -13,7 +13,7 @@ This project is a University Registration System for instructors and students. I
 
 ### 1. Home Page
 Displays a greeting message for users.
-![Alt text]([[./path/to/image.png](https://github.com/SallmaAtef/Registration-System/blob/main/image.png](https://github.com/SallmaAtef/Registration-System/blob/main/image.png)))
+![Home](https://github.com/SallmaAtef/Registration-System/blob/main/image.png)
 
 
 ### 2. Student Management
