@@ -31,6 +31,7 @@ Displays a greeting message for users.
 - Store instructor data by clicking "Add", and the data will be displayed on the instructor page.
 - If no image is provided, a "no image" placeholder will be shown.
 - Functions: View details, edit, delete, and search.
+- ![Faculty](https://github.com/SallmaAtef/Registration-System/blob/main/image%20(5).png)
 
 ### 4. Faculty Management
 - Add, modify, or delete faculty information.
