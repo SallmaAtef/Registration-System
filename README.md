@@ -22,6 +22,7 @@ Displays a greeting message for users.
 - Store student data by clicking "Add" and the data will be displayed on the student page.
 - If no image is provided, a "no image" placeholder will be shown.
 - Functions: View details, edit, delete, and search.
+- ![Registration](https://github.com/SallmaAtef/Registration-System/blob/main/image%20(1).png)
 
 ### 3. Instructor Management
 - Add and display instructor data by clicking "Add New".
