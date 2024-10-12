@@ -1,0 +1,7 @@
+﻿@model Instructor
+<h1 class="alert alert-warning"> @Model.FullName Details</h1>
+
+<partial name="_InstData"></partial>
+
+<a asp-controller="instructors" asp-action="GetIndexView">Back to list</a>
+<partial name="_TSContacts"></partial>

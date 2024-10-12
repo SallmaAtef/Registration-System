@@ -1,0 +1,22 @@
+﻿@{
+    Instructor instructor = (Instructor)ViewBag.CurrentStud;
+}
+
+<div class="row">
+    <dl class="col-6 row">
+    <dt class="col-2"> @Html.DisplayNameFor(d => instructor.Id)</dt>
+    <dd class="col-10">@Html.DisplayFor(d => instructor.Id) </dd>
+    <dt class="col-2"> @Html.DisplayNameFor(d => instructor.FullName)</dt>
+    <dd class="col-10"> @Html.DisplayFor(d => instructor.FullName) </dd>
+    <dt class="col-2"> @Html.DisplayNameFor(d => instructor.CourseName)</dt>
+    <dd class="col-10">@Html.DisplayFor(d => instructor.CourseName) </dd>
+    <dd class="col-10"> @Html.DisplayFor(d => instructor.BirthDate) | @Model.BirthDate</dd>
+    <dt class="col-2"> @Html.DisplayNameFor(d => instructor.JoinDate)</dt>
+    <dd class="col-10"> @Html.DisplayFor(d => instructor.JoinDate) | @Model.JoinDate</dd>
+    <dt class="col-2"> @Html.DisplayNameFor(d => instructor.IsActive)</dt>
+    <dd class="col-10"> @Html.DisplayFor(d => instructor.IsActive) | @Model.IsActive</dd>
+  </dl>
+    <img src="@Model.ImagePath" class="card col-4" style="object-fit:contain" />
+
+
+ </div>

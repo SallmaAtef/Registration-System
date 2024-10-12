@@ -1,0 +1,12 @@
+﻿@model Student
+<h1 class="alert alert-danger"> Are You Sure You Want To Delete This ? </h1>
+
+<partial name="_StudData"></partial>
+
+
+<form method="post" asp-controller="Instructors" asp-action="DeleteCurrent">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+
+<a asp-controller="students" asp-action="GetIndexView">Back to list</a>

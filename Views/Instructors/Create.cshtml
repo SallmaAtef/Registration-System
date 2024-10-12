@@ -1,0 +1,62 @@
+﻿@model Instructor
+<h1 class="alert alert-success text-center"> Add New Instructor</h1>
+
+<div class="row">
+    <form class="col-4" method="post" asp-controller="Instructors" asp-action="AddNew">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+     <div>
+            <label asp-for ="FullName"></label>
+            <input type="text" asp-for="FullName" class="form-control" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+     <div>
+            <label asp-for="CourseName"></label>
+            <input type="text" asp-for="CourseName" class="form-control" />
+            <span asp-validation-for="CourseName" class="text-danger"></span>
+     </div>
+     <div>
+            <label asp-for="BirthDate"></label>
+            <input asp-for="BirthDate" class="form-control" />
+            <span asp-validation-for="BirthDate" class="text-danger"></span>
+     </div>
+     <div>
+            <label asp-for ="JoinDate"></label>
+            <input asp-for="JoinDate" class="form-control" />
+            <span asp-validation-for="JoinDate" class="text-danger"></span>
+     </div>
+     <div>
+            <label asp-for ="IsActive" ></label>
+            <input asp-for="IsActive" />
+     </div>
+        <div>
+            <label asp-for="StudentId"></label>
+            <select asp-for="StudentId" asp-items="@(new SelectList(ViewBag.AllStudents,"Id","Faculty"))" class="form-control">
+                <option selected disabled>select..</option>
+            </select>
+            <span asp-validation-for="StudentId" class=" text-danger "></span>
+        </div>
+        <div>
+            <label asp-for="ImagePath"></label>
+            <input type="file" name="imageFormFile" id="imageFormFile" accept=".png,.jpg" class="form-control"
+              onchange="SetImgSrc()"/>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-4">Add</button>
+</form>
+
+    <img src="" id="studImage" class="col-4 card" style=" object-fit:contain" />
+</div>
+<a asp-controller="Instructors" asp-action="GetViewIndex">Back To List</a>
+
+@section Scripts
+{
+    <script>
+        function SetImgSrc() {
+
+            document.getElementById("studImage").src = window.URL.createObjectURL(document.getElementById
+                ("imageFormFile").files[0]);
+        }
+    </script>
+
+}
+

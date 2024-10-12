@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Student>
+
+<a asp-controller="Students" asp-action="GetCreateView" class="btn btn-success mb-1">Add New</a>
+
+<form method="get" asp-controller="Students" asp-action="GetIndexView">
+    <div class="input-group">
+    <input type="text" name="search" value="@ViewBag.search" />
+    <button type="submit" class="btn btn-secondary input-group-append"><i class="bi bi-search"></i></button>
+    </div>
+</form>
+
+ <partial name="_TSContacts"></partial>
+
+@if (Model.Count() > 0)
+{
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr><th>@Html.DisplayNameFor(d=>d.Id)</th>
+                <th>@Html.DisplayNameFor(d=>d.FullName)</th>
+                <th>@Html.DisplayNameFor(d=>d.Faculty)</th>
+                <th>@Html.DisplayNameFor(d=>d.JoinDate)</th>
+                <th>@Html.DisplayNameFor(d=> d.ImagePath)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.FullName</td>
+                    <td>@item.Faculty</td>
+                    <td>@item.JoinDate</td>
+                    <td><img src="@item.ImagePath" /></td>
+                    <td>
+                        <a asp-controller="Students" asp-action="GetDetailsView" asp-route-id="@item.Id"><i class="btn btn-warning  bi-card-list"></i></a>
+                        <a asp-controller="Students" asp-action="GetEditView" asp-route-id="@item.Id"><i class="btn btn-primary bi bi-pen-fill"></i></a>
+                        <a asp-controller="Students" asp-action="GetDeleteView" asp-route-id="@item.Id"><i class="btn btn-success bi bi-trash3-fill"></i></a>
+                    
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <h1 class="alert alert-danger text-center">there is no Students to display</h1>
+}
+<hr />
+
+@if (Model.Count() > 0)
+{
+    @foreach (var item in Model)
+    {
+        <div class="card bg-transparent mb-2 text-black text-center" style="width:18rem;height:12rem;display:inline-block">
+            <div class="card-header border-success bg-transparent">
+                @item.FullName
+            </div>
+            <div class="card body border-success bg-transparent">
+                <img src="@item.ImagePath" class="card-img-top" />
+                <div class="Card-title">@item.Faculty</div>
+                <div class="card-text">Started Join At @item.JoinDate.ToShortDateString()</div>
+            </div>
+            <div class="card-footer border-success bg-transparent">
+                Birth Date Is @item.BirthDate.ToShortDateString()
+            </div>
+        </div>
+    }
+}
+else
+{
+    <h1 class="alert alert-danger text-center">there is no Students to display</h1>
+}
+

@@ -1,0 +1,52 @@
+﻿@model Instructor
+<h1 class="alert alert-success text-center"> Edit Instructor</h1>
+
+<div class="row">
+    <form class="col-4" method="post" asp-controller="Instructors" asp-action="EditCurrent" enctype="multipart/form-data">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="ImagePath" />
+
+     <div>
+            <label asp-for="FullName"></label>
+            <input type="text" asp-for="FullName" class="form-control" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+       </div>
+     <div>
+            <label asp-for="CourseName"></label>
+            <input type="text" asp-for="CourseName" class="form-control" />
+            <span asp-validation-for="CourseName" class="text-danger"></span>
+        </div>
+     <div>
+            <label asp-for="BirthDate"></label>
+            <input asp-for="BirthDate" class="form-control" />
+            <span asp-validation-for="BirthDate" class="text-danger"></span>
+        </div>
+     <div>
+            <label asp-for="JoinDate"></label>
+            <input asp-for="JoinDate" class="form-control" />
+            <span asp-validation-for="JoinDate" class="text-danger"></span>
+        </div>
+     <div>
+            <label asp-for="IsActive"></label>
+            <input asp-for="IsActive" />
+    </div>
+     <div>
+          <label asp-for="StudentId"></label>
+            <select asp-for="StudentId" asp-items="@(new SelectList(ViewBag.AllStudents,"Id","Faculty"))" class="form-control">
+             <option selected disabled>select..</option>
+            </select>
+            <span asp-validation-for="StudentId" class=" text-danger "></span>
+     </div>
+        <div>
+            <label asp-for="ImagePath"></label>
+            <input type="file" name="imageFormFile" id="imageFormFile" accept=".png,.jpg" class="form-control"
+                   onchange="SetImgSrc()" />
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Edit</button>
+</form>
+    <img src="@Model.ImagePath" class="card col-4" style="object-fit:contain" />
+</div>
+<a asp-controller="instructors" asp-action="GetIndexView">Back to list</a>
