@@ -35,7 +35,7 @@ Displays a greeting message for users.
 ### 4. Faculty Management
 - Add, modify, or delete faculty information.
 - View faculty details including description.
-
+- ![Index](https://github.com/SallmaAtef/Registration-System/blob/main/image%20(4).png)
 ## Installation
 1. Clone the repository:  
    ```bash
